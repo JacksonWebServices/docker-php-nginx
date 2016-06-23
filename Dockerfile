@@ -39,6 +39,17 @@ RUN sed -i "s/display_errors = Off/display_errors = On/" $PHP_INI
 RUN sed -i "s/;date.timezone =/date.timezone = America\/New_York/" $PHP_INI
 RUN phpenmod mcrypt
 
+# Install composer
+RUN curl -sS https://getcomposer.org/installer | php && \
+    mv composer.phar /usr/local/bin/composer && \
+    composer self-update
+
+# npm/bower
+RUN ln -s /usr/bin/nodejs /usr/bin/node
+RUN npm install -g bower
+
+RUN mkdir -p /var/www
+WORKDIR /var/www
 
 EXPOSE 80
 

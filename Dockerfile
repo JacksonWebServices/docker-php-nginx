@@ -8,9 +8,15 @@ RUN apt-get update && \
     nginx \
     git \
     curl \
+    nodejs \
+    npm \
+    ruby \
     libnotify-bin \
     php7.0-fpm \
+    php7.0-mbstring \
     php7.0-mcrypt \
+    php7.0-mysql \
+    php7.0-odbc \
     php7.0-curl \
     php7.0-cli \
     php7.0-gd \

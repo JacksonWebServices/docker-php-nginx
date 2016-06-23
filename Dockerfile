@@ -48,6 +48,7 @@ RUN curl -sS https://getcomposer.org/installer | php && \
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN npm install -g bower
 
+RUN mkdir -p /run/php
 RUN mkdir -p /var/www
 WORKDIR /var/www
 

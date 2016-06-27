@@ -8,6 +8,7 @@ RUN apt-get update && \
     nginx \
     git \
     curl \
+    wget \
     nodejs \
     npm \
     ruby \
